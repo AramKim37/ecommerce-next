@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import CartModal from "./CartModal";
 
 const NavIcons = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -30,7 +31,7 @@ const NavIcons = () => {
         onClick={handleProfile}
       />
       {isProfileOpen && (
-        <div className="absolute p-4 rounded-md top-12 left-0 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <div className="absolute p-4 rounded-md top-12 left-0 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-20">
           <Link href="/">Profile</Link>
           <div className="mt-2 cursor-pointer">Logout</div>
         </div>
@@ -42,13 +43,20 @@ const NavIcons = () => {
         height={22}
         className="cursor-pointer"
       />
-      <Image
-        src="/cart.png"
-        alt="profile"
-        width={22}
-        height={22}
-        className="cursor-pointer"
-      />
+      <div className="relative cursor-pointer">
+        <Image
+          src="/cart.png"
+          alt="profile"
+          width={22}
+          height={22}
+          className="cursor-pointer"
+          onClick={() => setIsCartOpen((prev) => !prev)}
+        />
+        <div className="absolute -top-4 -right-4 w-6 h-6 bg-cartColor rounded-full items-center flex justify-center text-white text-sm">
+          2
+        </div>
+        {isCartOpen && <CartModal />}
+      </div>
     </div>
   );
 };
