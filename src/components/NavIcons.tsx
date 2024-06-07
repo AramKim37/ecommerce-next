@@ -55,8 +55,8 @@ const NavIcons = () => {
         <div className="absolute -top-4 -right-4 w-6 h-6 bg-cartColor rounded-full items-center flex justify-center text-white text-sm">
           2
         </div>
-        {isCartOpen && <CartModal />}
       </div>
+      {isCartOpen && <CartModal />}
     </div>
   );
 };
