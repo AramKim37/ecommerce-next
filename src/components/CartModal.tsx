@@ -4,23 +4,10 @@ import Image from "next/image";
 import Woman from "../../public/woman.png";
 
 const CartModal = () => {
+  const cartItems = true;
   return (
-    <div className="absolute top-10 -left-20 border-2 p-2 w-[300px]">
-      <h1>Shopping Cart</h1>
-      <div className="flex">
-        <Image src={Woman} width={64} height={64} alt="" />
-        <div className="flex">
-          <div>
-            <h1>Product Name</h1>
-            <p>Available</p>
-            <p>Qty 1</p>
-          </div>
-          <div>
-            <p>$30.5</p>
-            <p>Remove</p>
-          </div>
-        </div>
-      </div>
+    <div className="absolute p-4 rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white top-12 right-0 flex flex-col w-max">
+      {cartItems ? <div>Cart is Empty</div> : <div></div>}
     </div>
   );
 };
