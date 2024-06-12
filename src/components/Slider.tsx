@@ -39,11 +39,17 @@ const Slider = () => {
             className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}
             key={slide.id}
           >
-            <div className="h-1/2 xl:w-1/2 ">
-              <h2>{slide.description}</h2>
-              <h1>{slide.title}</h1>
+            <div className="h-1/2 xl:w-1/2 xl:h-full flex flex-col items-center justify-center gap-8 2xl:gap-12 text-center">
+              <h2 className="text-xl lg:text-3xl 2xl:text-5xl">
+                {slide.description}
+              </h2>
+              <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">
+                {slide.title}
+              </h1>
               <Link href={slide.url}>
-                <button>Shop now</button>
+                <button className="rounded-md bg-black text-white px-4 py-3">
+                  Shop now
+                </button>
               </Link>
             </div>
             <div className="h-1/2 xl:w-1/2 xl:h-full relative">
