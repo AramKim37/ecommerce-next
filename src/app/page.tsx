@@ -1,6 +1,7 @@
 import CategoryList from "@/components/CategoryList";
 import ProductList from "@/components/ProductList";
 import Slider from "@/components/Slider";
+import ListPage from "./list/page";
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
         <h1 className="text-2xl">New Product</h1>
         <ProductList />
       </div>
+      <ListPage />
     </div>
   );
 };
