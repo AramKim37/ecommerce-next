@@ -21,7 +21,6 @@ const HomePage = () => {
         <h1 className="text-2xl">New Product</h1>
         <ProductList />
       </div>
-      <ListPage />
     </div>
   );
 };
