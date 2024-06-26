@@ -10,7 +10,7 @@ const images = [
   },
   {
     id: 2,
-    url: "https://images.pexels.com/photos/1021693/pexels-photo-1021693.jpeg?auto=compress&cs=tinysrgb&w=800",
+    url: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export const ProductImages = () => {
       <div className="flex justify-between gap-4 mt-8">
         {images.map((img, i) => (
           <div
-            className="w-1/4 h-32 relative gap-4 mt-8"
+            className="w-1/4 h-32 relative gap-4 mt-8 cursor-pointer"
             key={img.id}
             onClick={() => setIndex(i)}
           >
